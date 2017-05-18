@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block navigation %}
+
+
+<div class="logheader">
+{% if global_access %}
+
+   <a href="{{ path('left') }}" class="btn btn-primary col-xs-1 col-xs-offset-10 blocksubmit">Sign out</a> 
+   
+{% else %} 
+
+   <a href="{{ path('auth') }}" class="btn btn-primary col-xs-1 col-xs-offset-10 blocksubmit">Sign in</a> 
+   <a href="{{ path('join') }}" class="btn btn-primary col-xs-1 blocksubmit">Sign up</a>
+
+    
+ {% endif %}  
+</div>
+{% endblock %}
+
+{% block stylesheets %}
+
+{% endblock %}

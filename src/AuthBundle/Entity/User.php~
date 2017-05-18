@@ -1,0 +1,50 @@
+<?php
+
+namespace AuthBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * User
+ *
+ * @ORM\Table(name="user", uniqueConstraints={@ORM\UniqueConstraint(name="email", columns={"email"})}, indexes={@ORM\Index(name="sprint", columns={"sprint"})})
+ * @ORM\Entity
+ */
+class User
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=128, nullable=false)
+     */
+    private $email;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="password", type="string", length=64, nullable=false)
+     */
+    private $password;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var \AuthBundle\Entity\Sprint
+     *
+     * @ORM\ManyToOne(targetEntity="AuthBundle\Entity\Sprint")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="sprint", referencedColumnName="id")
+     * })
+     */
+    private $sprint;
+
+
+}
+

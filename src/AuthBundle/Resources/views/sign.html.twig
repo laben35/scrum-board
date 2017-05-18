@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+{% block navigation %}
+
+{% endblock %}
+
+{% block section %}
+
+
+<h1>{{ title }} to Sprint.io</h1>
+
+
+{% if message %}
+
+<p>{{ message }}</p>
+
+{% endif %}
+
+{{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+{{ form_widget(form) }}
+{{ form_end(form) }}
+
+
+<p class="row baseline">
+	{{ legend }}
+	<a href="{{ url }}">
+		{{ link }}
+	</a>.
+</p>
+
+
+{% endblock %}
+

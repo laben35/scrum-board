@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <meta charset="UTF-8" />
+        <title>Scrum-board{% block title %}{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="stylesheet" type="text/css" href="{{ asset('node_modules/bootstrap/dist/css/bootstrap.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}" />
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        
+   </head>
+   
+   <body>
+       <a href="{{ path('homepage') }}" class="bloclogo col-xs-2 col-xs-offset-5">
+	   <img src="{{ asset('image/Sprint-s.png') }}" alt="Scrum-board"/>
+       </a>
+   <nav class="col-xs-12">
+        {% block navigation %}{% endblock %}                
+   </nav>
+   <section class="section col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-4">
+       {% block section %}
+       {% endblock %}
+   </section>
+        <footer>
+           {% block footer %}{% endblock %}
+        </footer>
+         
+    </body>
+</html>

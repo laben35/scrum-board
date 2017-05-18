@@ -1,0 +1,20 @@
+sprint:
+    resource: "@SprintBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+auth:
+    resource: "@AuthBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+bar:
+    resource: "@BarBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation

@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block section %}
+
+{# <a href="{{ path('homepage') }}">#}
+{#     <img src="{{ asset('image/Sprint-s.png') }}" alt="Sprint.io" />#}
+{# </a>#}
+
+   <h1>Sprint</h1>
+   
+{% if master_access %}
+
+<a href="{{ path('delete') }}">
+    Delete
+</a>
+
+
+{% endif %}
+
+<p>
+   <h2> {{ goal }} </h2>
+   <h4> {{ description }} </h4> 
+   <h3> {{ days }} day </h3>
+   <h3> {{ time }} </h3>
+{#    <h2> {{ duration }} </h2>  #}
+   <h2>Pourcentage de temps passe {{ percent }} %</h2>
+   
+</p>
+
+
+
+{# {{ FORM_START(FORM, {'ATTR': {'NOVALIDATE': 'NOVALIDATE'}}) }}#}
+{# {{ FORM_WIDGET(FORM) }}#}
+{# {{ FORM_END(FORM) }}#}
+
+{% endblock %}
+
